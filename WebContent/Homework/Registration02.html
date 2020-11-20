@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <title>Registration02</title>
+
+<style>
+    table{
+        background-color: #FFFFFF; color: #020202; width: 1000px; height:  1000px;
+        border: 1px solid gray; 
+    }
+
+   
+
+    a > img{
+        width: 32px; height: 32px; vertical-align: bottom;
+    }
+    td > button{
+    border-spacing: 1px; background-color: #343434; color: white;
+    }
+
+    .subject{
+        text-align: right;
+    }
+
+    .gender > button{
+        background-color: black;
+    }
+
+    .gender > button:active{
+       background-color:white ; color: black; width: 100px;
+      
+       
+    }
+    
+    b > button{
+        text-align: right ;padding-right: 15px;
+    }
+
+    .id{
+       vertical-align: middle;
+        }
+    .id::first-letter{
+            color: red;  padding-top: 5px;
+        }
+
+    #id{
+        padding: 5px;
+
+    }
+    #id2{
+        padding: 5px;
+    }
+    #sig{
+        background-color: #274069; padding: 8pt; width: 15em;
+    }
+</style>
+
+
+
+</head>
+<body>
+    <table>
+    <tr>
+        <td style="size: ;">*필수입력사항</td>
+    </tr>
+    <tr>
+        <th class="id">*&shy;아이디</th>
+        <td style="color: gray; font-size: small;" class="gender">
+            <input type="text" size="25" id="id2" >
+            <button style="margin:3px;" id="id">중복확인</button>
+        <br>※3~15자의 영문과 숫자만 가능합니다.
+        </td>
+    </tr>
+    <tr>
+        <form action=""></form>
+        <th class="id">*&shy;비밀번호</th>
+        <td style="color: gray; font-size: small;">
+            <input type="password" size="20" id="id2"> 
+        <br>※영문/숫자/특수문자 조합 6~20자 이상 입력해주세요.(아이디/전화번호사용불가)
+        <br>※1234**비밀번호는 홈페이지 사용에 제한됩니다.</td>
+        
+    </tr>
+    <tr>
+        <form action=""></form>
+        <th class="id">*&shy;비밀번호 확인</th>
+        <td><input type="password" size="20" id="id2"></td>
+    </tr>
+    <tr>
+
+        <th class="id">*&shy;이름</th>
+        <td class="gender"><input type="text" id="id2">
+            <button id="id2">여</button>&nbsp;<button id="id2" >남</button>
+        </td>
+    </tr>
+    <tr>
+        <th class="id">*&shy;생년월일</th>
+        <td><input type="text" value="2019-05-20" id="id2"><a href=""><img src="./images/21.png" alt=""></a>
+        
+        </td>
+    </tr>
+    <tr>
+        <th class="id">*&shy;주소</th>
+        <td class="gender"><input type="text" id="id2" >&nbsp;<button>우편번호찾기</button>
+        <br><br>
+        <input type="text" size="30" id="id2">&nbsp;<input type="text" id="id2">
+        </td>
+    </tr>
+    <tr>
+        <th class="id">*&shy;이메일</th>
+        <td><input type="text" id="id2">&nbsp;@&nbsp;<input type="text" id="id2">
+        <select name="ㅎ" id="id2" >
+            <option value="a" >직접입력</option>
+            <option value="b">naver.com</option>
+            <option value="c">goolge.com</option>
+            <option value="d">daum.net</option>
+        </select>
+        </td>
+    </tr>
+    <tr>
+        
+        <th class="id">*&shy;휴대폰번호</th>
+        <td>
+        <select name="넘" id="id2" >
+            <option value="넘바" >010</option>
+            <option value="넘">011</option>
+            <option value="놈">017</option>
+        </select>
+        -&nbsp;<input type="text" size="10" maxlength="4" id="id2">
+        -&nbsp;<input type="text" size="10" maxlength="4"id="id2">
+         </td>
+    
+    </tr>
+    <tr>
+        <th>전화번호</th>
+        <td>
+         <select name="몰라" id="id2">
+             <option value="몰라">070</option> 
+             <option value="더몰라">02</option>
+             <option value="ㅎㅎ">031</option>
+        
+        </select>
+             -&nbsp;<input type="text" size="10" maxlength="4" id="id2">
+             -&nbsp;<input type="text" size="10" maxlength="4" id="id2">
+        </td>
+    </tr>
+    <tr>
+        <th>출판계약일</th>
+        <td><input type="text" id="id2"><a href=""><img src="./images/21.png" alt=""></a>
+        </td>
+    </tr>
+    <tr>
+        <th>출판종료일</th>
+        <td><input type="text" id="id2" ><a href=""><img src="./images/21.png" alt=""></a>
+        </td>
+    </tr>
+    <tr>
+        <th>선택정보</th>
+        <td style="color: gray; font-size: small;"><input type="checkbox" >자비출판
+        &nbsp;&nbsp;
+        <input type="checkbox">반기획출판
+        &nbsp;&nbsp;
+        <input type="checkbox">프리미엄출판
+        &nbsp;&nbsp;
+        <input type="checkbox">출판컨설팅
+        &nbsp;&nbsp;
+        <br><br>
+        <input type="checkbox">기획출판
+        &nbsp;&nbsp;
+        <input type="checkbox">미정
+        </td>
+    </tr>
+     
+    <tr>  
+        <th><input type="checkbox">전체동의</th>
+        
+       <br><br>
+        <td style="color: gray; font-size: small;" ><input type="checkbox">이용약관(필수)<a href="">약관보기></a>
+        <br><br>
+        <input type="checkbox" >개인정보처리방침(필수)<a href="" >약관보기></a>
+        <br><br>
+        <input type="checkbox">이벤트 및 혜택 알림 수신(선택)
+        <br><br>
+        <input type="checkbox" >SMS
+        <input type="checkbox">이메일
+        &nbsp; &nbsp;
+        </td>
+    </tr>
+    
+    
+    
+    <tr>
+        <td colspan="2">
+            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+            
+            
+            <button type="submit" id="sig">가입하기</button>
+
+        </td>
+    </tr>
+    
+    
+    
+    
+</table>
+
+
+</body>
+</html>

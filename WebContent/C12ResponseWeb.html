@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C12ResponseWeb.html</title>
+    <style type="text/css">
+    /*전체선택자를 통해 문서의 기본스타일 지정*/
+        *{margin: 0; padding: 0; font-family: Verdana;}
+
+        /*block엘리먼트 자체에 대한 가운데 정렬을 위해 margin을 사용한다.
+        적용되지 않는 브라우저가 있다면 text-align을 통해 정렬한다.*/
+        #AllWrap{
+            margin: 0 auto; text-align: center;
+        }
+        #PartWrap{
+            width: 100%; text-align: left;
+            border: 1px solid blue;
+        }
+
+        #header{
+            border: 1px solid blue; text-align: center;
+            height: 100%; line-height: 100px;
+        }
+        /*
+        li태그의 기본 블릿을 제거한다.
+        overflow의 속성
+            visible : 컨텐츠가 박스를 넘어가도 보이게 처리
+            hidden : 박스를 벗어난 부분은 숨김처리
+            scroll : 컨텐츠의 크기와 상관없이 스크롤바 생김
+            auto : 컨텐츠의 크기에 따라 스크롤바가 토글됨
+        */
+        #nav ul{
+            list-style: none;
+            overflow: hidden; 
+        }
+
+        #nav ul li{
+            font-size: 1.5em; font-weight: bold; height: 50px;
+            width: 20%; float: left; border: 1px solid blue;
+            text-align: center; line-height: 50px;
+            /*전체넓이에 패딩과 보더를 포함하여 지정한다.*/
+            box-sizing: border-box;
+        }
+
+        #ContentWrap #content> h2{
+            border-bottom: 1px #808080 solid;
+            font-size: 2em;
+        }
+
+        #content{
+            padding: 20px;
+        }
+
+        #footer{
+        font-size:2em; font-weight: bold; height: 100px;
+        line-height: 100px; text-align: center;
+        border: 1px solid blue;
+        }
+        
+        /*반응형웹을 구현하기 위해 미디어쿼리를 사용한다.
+        디바이스(단말기)의 해상도에 따라 다른 형태의 화면을
+        보여주게 된다. 이 경우 모바일용 웹화면을 별도로
+        제작하지 않아도 되어 편리하다.*/
+        /*스크린의 크기가 640이하일때의 화면설정*/
+        @media screen and (max-width:640px){
+            #AllWrap{width:100%;}
+            #content p{
+                font-size: 2em; color: black;
+            }
+        }
+        /*스크린의 크기가 1000이상일때 설정*/
+        @media screen and (min-width:1000px){
+            #AllWrap{width:80%;}
+            #content p{
+                font-size: 1em; color: green;
+            }
+        }
+        /*스크린의 크기가 641~999일때 설정*/
+        @media screen and (min-width:641px) and (max-width:999px){
+            #AllWrap{width:100%;}
+            #content p{
+                font-size: 1.5em; color: red;
+                background-color: black;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="AllWrap"><!-- 페이지 전체를 관장하는 레이어 -->
+        <div id="PartWrap">
+            <div id="header">
+                <h1>HEADER</h1>
+            </div>
+            <div id="nav">
+                <ul>
+                    <li>메뉴 1입니다</li>
+                    <li>메뉴2</li>
+                    <li>메뉴3</li>
+                    <li>메뉴4</li>
+                    <li>메뉴5</li>
+                </ul>
+            </div>
+        </div>
+        <div id="ContentWrap">
+            <div id="content">
+                <h2>"손흥민 처분할 시점" 예측게임 전문가 10명 중 9명의 권고</h2>
+                <p>
+                    [풋볼리스트] 김정용 기자= 판타지 프리미어리그(FPL) 게이머들의 현명한 결정을 돕는 전문가들이 손흥민을 처분하라고 권했다.
+
+                    잉글랜드 프리미어리그(EPL)는 선수들의 매 경기 개인기록을 예측하는 게임 FPL을 공식 운영 중이다. 전통 있는 놀이문화인 판타지 게임을 더욱 활성화시키기 위해 매주 전문가 의견까지 제시해가며 유저들의 활발한 참여를 유도하고 있다.
+                    
+                    이번 주 전문가 칼럼 주제는 토트넘홋스퍼의 손흥민과 케인의 매각 여부다. 현재 손흥민은 8골 2도움으로 득점 공동 1위에 올라 있으며, 케인은 7골 8도움으로 득점 선두권인 동시에 도움 1위를 달리고 있다. 판타지 게임은 좋은 성적을 거두고 있는 내 선수를 적절한 시점에 처분하고, 그 점수로 저평가된 새로운 스타를 사들이는 것이 중요한 게임 요령이다.
+                    
+                    처분해야 한다는 의견이 압도적이었다. 전문가 10명 중 7명이 둘 다 처분할 것을 권했다. 케인을 남기고 손흥민을 처분한다는 전문가 2명, 둘 다 남기겠다는 전문가는 1명에 불과했다. 샘 본필드는 '케인은 뺄 수 없다. 반면 손흥민의 꾸준함은 케인 수준이 아니다. 하킴 지예흐나 케빈 더브라위너로 바꿀 만하다'고 분석했다.
+                    
+                    유일하게 둘 다 지키겠다고 말한 닐 서먼은 '토트넘의 일정이 어렵지만 상대 강팀의 수비에도 문제가 있다. 토트넘의 승패와 별개로 손흥민, 케인은 득점에 관여할 것이다'라고 전망했다.
+                    
+                    또한 둘 다 팔겠다는 전문가 중 우트카시 달미아는 굳이 한 명을 지킨다면 손흥민을 고른다며 '일정을 중시하는 입장에서 앞으로 7경기 동안 토트넘의 상대팀이 어렵다는 걸 고려했다. 한 명을 지킨다면 손흥민이 낫다. 토트넘이 강팀을 만나 역습 위주로 경기한다면 케인이 후방으로 내려가고 손흥민을 통해 공격할 것이 유력하다'고 전망했다.
+                    
+                    판타지 게임은 실제 EPL 경기 결과에 따라 진행되기 때문에, 이들의 분석은 곧 토트넘과 손흥민의 성적에 대한 분석이기도 하다. 손흥민의 개인기록이 앞으로 저조해질 거라고 예상한 전문가가 8명인 셈이다.
+                    
+                    토트넘은 현재 EPL 2위에 올라 있다. A매치 기간이 지난 뒤 22일(한국시간) 난적 맨체스터시티와 9라운드를 갖는다.
+
+                </p>
+            </div>
+        </div>
+        <div id="footer">
+            <h1>FOOTER</h1>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration01.html</title>
+    <style>
+        #form {
+            border:1px solid #CCCCCC; border-spacing: 0px 0px;
+            border-collapse: collapse; width: 700px; height: 500px;
+            box-sizing: border-box; 
+          
+        }
+
+        th {border: 1px solid #CCCCCC; background-color: #E4E6E9;
+            text-align: left; font-size: 10pt; width: 100px;
+
+        }
+
+        tr{ border: 1px solid #CCCCCC; background-color: white; 
+
+        }
+
+        #id{
+            border-color: 1px solid #CCCCCC ; box-sizing: border-box;
+        }
+        .id::first-letter{
+            color: red; 
+        }
+
+        #inter{
+            width: 200px; border-color: 1px solid #CCCCCC
+        }
+
+        #root{
+            width: 200px; border-color: 1px solid #CCCCCC
+        }
+        td{ padding-left: 10px; 
+
+        }
+
+        div{
+            font-size: 10pt;color: gray; text-align: right;
+        }
+
+        #ref{
+            font-size: 11pt;
+        }
+        td>button{
+            background-color: #373737;
+            color: white; width: 70px;height: 20px;
+            font-size: 10pt; border: none; 
+        }
+
+        input{
+            border:1px solid #CCCCCC;
+            display:inline;
+        }
+
+       #regist{
+           background-color:red; color: white;
+           width: 100px; height: 30px; font-weight: bold;
+       }
+       #rewrite{
+           background-color:black; color: white;
+           width: 100px; height: 30px; font-weight: bold;
+       }
+
+
+    </style>
+</head>
+<body>
+    <fieldset style="width: 730px; height: 600px;">
+        <div class="id">*&shy; 필수 입력&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <!-- #은 아이디, .은 클래스  -->
+        <table id="form" style="margin-top: 10px;">
+            <tr>
+                <th class="id" >*&shy;아이디</th>
+                <td style ="color:gray; font-size: 10pt;" >
+                    <input type="text" id="id" size="15" color="#E4E6E9">
+                    <button type="button" >중복확인</button>
+                     &nbsp;&nbsp;&nbsp;+4~15자, 첫 영문자, 영문자와 숫자 조합
+                </td>
+            </tr>
+            <tr>
+                <th class="id">*&shy;비밀번호</th>
+                <td >
+                    <input type="text" id="pw" size="11">
+                </td>
+                
+            </tr>
+            <tr>
+                <th class="id">*&shy;비밀번호 확인</th>
+                <td style ="color:gray; font-size: 10pt;">
+                    <input type="text" id="pwcheck" size="11" >
+                    &nbsp;(확인을 위해 다시 입력해주세요)
+                </td>
+                
+            </tr>
+            <tr>
+                <th class="id">*&shy;이름</th>
+                <td >
+                    <input type="text" id="name" size="15">
+                </td>
+                
+            </tr>
+            <tr>
+                <th>&nbsp;생년월일</th>
+                <td style ="color:black; font-size: 10pt;">
+                    <input type="radio" name="gender" value="F" checked="checked" size="7">여자
+                    
+                    <input type="radio" name="gender" value="M" >남자
+                    &nbsp;
+                    <input type="text" id="year" size="3">년
+                    <input type="text" id="month" size="1">월
+                    <input type="text" id="day" size="1">일
+                    <span style="color: gray;">&nbsp;&nbsp;(예, 1993년 01월 22일)</span>
+                    
+                </td>
+            </tr>
+            <tr>
+                <th class="id" rowspan="2">*&shy;이메일</th>
+                <td style="font-size: 10pt; color: gray;">
+                <input type="text" size="10">@
+                <input type="text" size="10">
+                <select name="mail" id="mail">
+                    <option value="g">gmail.com</option>
+                    <option value="n">naver.com</option>
+                    <option value="y">yahoo.co.kr</option>
+                    <option value="na">nate.com</option>
+                    <option value="h">hanmail.com</option>
+                </select>
+                <input type="radio" name="rc" value="Y">수신허용
+                <input type="radio" name="rc" value="N" checked="checked">수신불가
+            </tr>
+            <td style="color: gray; font-size: 10pt;" >
+                ※hanmail.net은 메일 수신이 어려울 수 있으니 가급적 다른 메일을 이용하시기 바랍니다.
+            </td>
+            <tr>
+                <th rowspan="3">&nbsp;주소</th>
+                <td  style="font-size: 10pt; color: gray;">
+                    <button type="button" >주소찾기</button>
+                    <input type="text" size="6">&nbsp;(우편번호)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" size="60">
+                </td>
+            </tr>
+            <tr>
+                <td style="color: gray; font-size: 10pt;">
+                    <input type="text" size="40">&nbsp;&nbsp;+나머지 주소
+                </td>
+            </tr>
+            <tr>
+                <th>&nbsp;전화번호</th>
+                <td>
+                    <input type="text" id="p1" size="1">-
+                    <input type="text" id="p2" size="2">-
+                    <input type="text" id="p3" size="2">
+                </td>
+            </tr>
+            <tr>
+                <th class="id">*&shy;휴대전화</th>
+                <td style="font-size: 10pt; color: gray;">
+                    <input type="text" id="p1" size="1">-
+                    <input type="text" id="p2" size="2">-
+                    <input type="text" id="p3" size="2">
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="sms" value="ok" checked="checked" size="7">SMS 수신허용               
+                    <input type="radio" name="sms" value="no" />SMS 수신불가
+                    
+                </td>
+            </tr>
+            <tr>
+                <th class="id">*&shy;관심분야</th>
+                <td>
+                    <select name="interest" id="inter">
+                        <option value="op">::관심분야 선택::&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                        <option value="fashion">패션</option>
+                        <option value="gourmet">음식</option>
+                        <option value="sports">운동</option>
+                        <option value="coding">코딩</option>
+                        <option value="etc">기타</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th class="id">*&shy;가입경로</th>
+                <td>
+                    <select name="joinroot" id="root">
+                        <option value="op">::가입경로 선택::&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                        <option value="fashion">검색</option>
+                        <option value="gourmet">친구 추천</option>
+                        <option value="sports">SNS 광고</option>
+                        <option value="coding">유튜브</option>
+                        <option value="etc">기타</option>
+                    </select>
+                </td>
+            </tr>
+            
+        </table>
+        <div style="text-align: center;">
+            <br>
+                <button type="button" id="regist" > 등록하기</button>&nbsp;&nbsp;&nbsp;
+                <button type="button" id="rewrite"> 새로쓰기</button>
+
+        </div>
+    </fieldset>
+</body>
+</html>
